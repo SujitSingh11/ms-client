@@ -1,0 +1,13 @@
+.dashboard-nav {
+  margin-top: 15px;
+  display: flex;
+  justify-content: space-between;
+}
+
+.nav-links {
+  background-color: black !important;
+  border-radius: 0px !important;
+  width: 30%;
+  padding: 10px !important;
+  font-family: "Lato", sans-serif !important;
+}

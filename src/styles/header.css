@@ -1,0 +1,15 @@
+.banner-bar {
+  height: 25px;
+  background-color: black;
+}
+
+.header {
+  width: 100%;
+  display: flex;
+  justify-content: center;
+  margin: 10px 0;
+}
+
+.header-logo {
+  width: 25%;
+}
