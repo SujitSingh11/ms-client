@@ -1,25 +1,52 @@
-import { Button, Container } from "@mui/material";
+import { Button, Container, Grid } from "@mui/material";
+import AddCircleOutlineIcon from "@mui/icons-material/AddCircleOutline";
 import React from "react";
 
 const NewOrder = () => {
   return (
-    <Container maxWidth="lg">
-      <div className="new-order-box">
-        <div className="input-field">
-          <lable className="login-lable">Email ID/ Username</lable>
-          <input className="input" />
+    <Grid container spacing={2}>
+      <Grid xxl={4} xl={4} lg={4} md={4} sm={4} item>
+        <div className="new-order-box">
+          <div className="input-field">
+            <label className="login-lable">Customer ID</label>
+            <div className="new-order-inputs">
+              <input type="text" className="new-order-input" />
+              <AddCircleOutlineIcon className="new-customer-icon" />
+            </div>
+          </div>
+          <div className="input-field">
+            <label className="login-lable">Product ID</label>
+            <div className="new-order-inputs">
+              <input type="text" className="new-order-input" />
+            </div>
+          </div>
+          <div className="input-field">
+            <label className="login-lable">Quantity</label>
+            <div className="new-order-inputs">
+              <input type="number" className="new-order-input" />
+            </div>
+          </div>
+          <div className="new-order-actions">
+            <Button className="button-new-order" variant="contained">
+              Generate Bill
+            </Button>
+            <Button className="button-new-order" variant="contained">
+              Add Item
+            </Button>
+          </div>
         </div>
-        <div className="input-field">
-          <lable className="login-lable">Password</lable>
-          <input className="input" />
+      </Grid>
+      <Grid xxl={8} xl={8} lg={8} md={8} sm={8} item>
+        <p className="login-lable">Proposed Sale</p>
+        <div className="cart-grid">
+          <Container maxWidth="xl">
+            <div>Product 1</div>
+            <div>Product 2</div>
+            <div>Product 3</div>
+          </Container>
         </div>
-        <div className="login-footer">
-          <Button className="button" variant="contained">
-            Continue
-          </Button>
-        </div>
-      </div>
-    </Container>
+      </Grid>
+    </Grid>
   );
 };
 
